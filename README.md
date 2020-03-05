@@ -8,6 +8,8 @@
   - [INTRODUCTION](#introduction)
   - [PREREQUISITES](#prerequisites)
   - [INSTALL](#install)
+    - [DOCKER RUN](#docker-run)
+    - [DOCKER COMPOSE](#docker-compose)
   - [LICENSE](#license)
 
 ## BADGES
@@ -22,7 +24,7 @@ Docker image of :
 
 Continuous integration on :
 
-- [gitlab](https://gitlab.com/oda-alexandre/crunch/pipelines)
+- [gitlab pipelines](https://gitlab.com/oda-alexandre/crunch/pipelines)
 
 Automatically updated on :
 
@@ -34,7 +36,26 @@ Use [docker](https://www.docker.com)
 
 ## INSTALL
 
-```docker run -ti --rm --name crunch -v ${HOME}:/home/crunch alexandreoda/crunch```
+### DOCKER RUN
+
+```docker run -ti --rm --name crunch -v ${HOME}:/home/crunch alexandreoda/crunch
+```
+
+### DOCKER COMPOSE
+
+```yml
+version: "3.7"
+
+services:
+  crunch:
+    container_name: crunch
+    image: alexandreoda/crunch
+    restart: "no"
+    network_mode: none
+    privileged: false
+    volumes:
+      - "${HOME}:/home/crunch"
+```
 
 ## LICENSE
 

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  crunch:
+    container_name: crunch
+    image: alexandreoda/crunch
+    restart: "no"
+    network_mode: none
+    privileged: false
+    volumes:
+      - "${HOME}:/home/crunch"
