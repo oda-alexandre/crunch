@@ -38,7 +38,8 @@ Use [docker](https://www.docker.com)
 
 ### DOCKER RUN
 
-```docker run -ti --rm --name crunch -v ${HOME}:/home/crunch alexandreoda/crunch
+```\
+docker  run -ti --rm --name crunch -v ${HOME}:/home/crunch alexandreoda/crunch
 ```
 
 ### DOCKER COMPOSE
